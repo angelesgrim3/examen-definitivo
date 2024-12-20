@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "ubutum", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth; /*activar desplazamiento suave*/
+
+}
+
+.contenedor_maestro {
+    background-color: red;
+    width: 800px;
+    height: 800px;
+    overflow-y: scroll;
+    padding: 2rem;
+    scroll-snap-type: y mandatory; /*activamos snap scroll*/
+
+}
+
+header.portada {
+    scroll-snap-align: start;
+    background-image: linear-gradient(
+        hsla(120, 80%, 50%, .7),
+        hsla(200, 70%, 50%, .7)
+    ), url(../img/cerca-pinturas-al-oleo-pinceles-paleta_176420-2834.jpg);
+    background-size: cover;
+    background-position: 60%;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 3.5rem;
+            animation: flotable-flecha 2s infinite;
+        }
+    }
+         animation:fondobanner 10s ease-in-out infinite;
+
+ 
+}
+
+@keyframes fondobanner {
+
+    0%  {
+        background-position: 40%  20%;
+
+    }
+    50%{
+        background-position: 45%  30%;
+
+    }
+   
+    100% {
+        background-position: 10%  20%;
+    }
+ }  
+
+
+@keyframes flotable-flecha {
+    0% { transform: translateY(-.5rem);}
+    50% { transform: translateY(.1rem);}
+    100% { transform: translateY(-.5rem);}
+}
+
+section.contacto { 
+    scroll-snap-align: start;
+    background-color: rgb(75, 242, 75);
+    width: 100%;
+    height: 800px;
+    scroll-snap-align: start;
+    background-image: linear-gradient(
+        hsla(120, 80%, 50%, .7),
+        hsla(200, 70%, 50%, .7)
+    ), url(../img/piano-libro-musica_107420-64965.jpg);
+    background-size: cover;
+    background-position: 0%;
+
+    animation:fondobanner 10s ease-in-out infinite;
+    
+    @keyframes fondobanner {
+
+        0%  {
+            background-position: 40%  20%;
+    
+        }
+        50%{
+            background-position: 45%  30%;
+    
+        }
+       
+        100% {
+            background-position: 10%  20%;
+        }
+}
+}

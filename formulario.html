@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        body{
+            background-image: url(assets/img/piano-libro-musica_107420-64965.jpg);
+            background-color: aqua;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formulario{
+            background-color: blue;
+            width: 90%;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.60);
+            box-shadow: 0  0 10px rgba(0, 0, 0, .15);
+            backdrop-filter: blur (20px);
+            border: 1px solid rgba(255, 255, 255, 0.50);
+            border-radius: 1rem;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                margin-bottom: 1rem;
+                
+                input[ type="text"],
+                input[ type="tel"],
+                input[ type="mail"],
+                selec   {
+                    padding: .5rem;
+                    border-radius: 0px;
+                    border: 1px;
+                }
+          
+                textarea {
+                    width: 100%;
+                    min-height: 150px;
+                    padding: .5rem;
+
+                }
+
+                input:focus {
+                    outline: 2px solid rgb(18, 136, 209);
+
+                }
+                
+            }  
+            
+            input[ type="submit"]{
+                padding: 1rem;
+                width: 100%;
+                font-size: 1.2rem;
+                border-radius: 3rem;
+                border: 0px;
+                background-color: blue;
+                color: white;
+                font-weight: 800;
+                cursor: pointer;
+                position: absolute;
+                width: 50%;
+                left: 50%;
+                transform: translate(-50) translateY(10%);
+
+            }
+
+             input[ type="submit"]:hover {
+                background-color: red;
+
+             }
+                
+            }
+        
+        
+    </style>
+</head>
+<body>
+
+
+    <form class="formulario" action="" method=""> 
+
+        <div>
+
+           <label for="nombre"> Nombre </label>
+          <input id="nombre" type="text" name="nombre" placeholder="tu nombre">
+
+    </div>
+    <div>
+
+        <label for="telefono"> Whatsapp</label>
+        <input id="telefono" type="tel" name="telefono" placeholder="tu wsp con codigo de area" required >  </input>
+
+    </div>
+        
+     <div> 
+            <label for="Email" > Email</label>
+            <input id="Email" type="mail" name="Email" placeholder="tu correo electronico" required>
+    </div>
+
+    <div>
+         <label for="Selecciona"> Selecciona el tipo de web</label>
+
+         <select name="tipoweb" id="Selecciona">
+            <option value="onepage" selected>One page</option>
+            <option value="Corporativa"> Corporativa</option>
+            <option value="Ecommerce">e-commerse</option>
+            <option value="elearning">e-learning</option>
+            <option value="otro">otro</option>
+         </select>
+    </div>
+
+      <div>
+        <label for="mensaje">mensaje</label>
+        <textarea name="mensaje" id="mensaje" placeholder="hablame sobre las secciones de tu pagina"></textarea>
+      </div>
+      <div class="bocetos">
+        <label for="boceto">Sube el boceto de tu idea</label>
+        <input type="file" name="boceto">
+    </div> 
+     
+     <div class="boton cotizar">
+     <input type="submit" value="cotizar">
+
+    </form>
+</body>
+</html>
